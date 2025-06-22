@@ -1,0 +1,88 @@
+% \documentclass{jpsj3}
+\documentclass[shortnote,twocolumn]{jpsj3}
+\usepackage{txfonts}
+
+\usepackage{bm}
+\usepackage{color}
+\usepackage{derivative}
+\usepackage{graphicx}
+% \usepackage[colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue,bookmarks=false]{hyperref}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{physics2}
+\usephysicsmodule{ab, braket}
+
+% 略語
+% STM
+
+\graphicspath{{./fig}}
+
+\title{Nice title of the paper}
+
+\author{Yuhki Kohsaka$^1$\thanks{kohsaka.yuhki.3@kyoto-u.ac.jp}, Tetsuo Hanaguri$^2$, and Tsuyoshi Tamegai$^3$}
+\inst{
+    $^1$Department of Physics, Kyoto University, Kyoto 606-8502 Japan\\
+    $^2$RIKEN Center for Emergent Matter Science, Wako, Saitama 351-0198, Japan\\
+    $^3$Department of Applied Physics, The University of Tokyo, Tokyo 113-8656, Japan
+}%\\
+
+\abst{Less than 70 words}
+
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+You can use this file as a template to prepare your manuscript for \textit{Journal of Physical Society of Japan} (JPSJ)\cite{jpsj,instructions}. No sections or appendices should be given to other categories than Regular Papers. Key words are not necessary.
+
+Copy \verb|jpsj3.cls|, \verb|cite.sty|, and \verb|overcite.sty| onto an arbitrary directory under the texmf tree, for example, \verb|$texmf/tex/latex/jpsj|. If you have already obtained \verb|cite.sty| and \verb|overcite.sty|, you do not need to copy them.
+
+Many useful commands for equations are available because \verb|jpsj3.cls| automatically loads the \verb|amsmath| package. Please refer to reference books on \LaTeX\ for details on the \verb|amsmath| package.
+
+Use the \verb|\appendix| command if you need an appendix(es). The \verb|\section| command should follow even though there is no title for the appendix (see above in the source of this file).
+
+For authors of Invited Review Papers, the \verb|profile| command is prepared for the author(s)' profile.  A simple example is shown below.
+
+% ============================================================
+\section{Methods}
+
+Single crystals of \ce{Bi2Sr2CaCu2O_{8+\delta}} were grown by the floating-zone method.
+The samples were optimally doped, exhibiting a superconducting transition temperature of \qty{92}{\kelvin}.
+Prior to measurement, the crystals were cleaved \textit{in situ} at \qty{77}{\kelvin} in an ultra-high vacuum chamber to expose clean surfaces, and were immediately transferred to a cryogenically cooled STM head.
+
+Electrochemically etched tungsten tips were used for all STM measurements.
+The tips were cleaned by electron-beam heating and subsequently conditioned on a Cu(111) surface.
+
+STM measurements were performed at a temperature of \qty{4.7}{\kelvin}.
+The tip was virtually grounded while a bias voltage was applied to the sample.
+Differential conductance spectra were acquired using a standard lock-in technique under open-loop conditions, with the feedback loop disabled during the spectroscopy measurements.
+A bias modulation of \qty{2}{\milli\volt} at \qty{614.7}{\hertz} was applied for the lock-in detection.
+
+% ============================================================
+\section{Experimental Results}
+
+\begin{figure}
+    %\includegraphics{fig01.eps}
+    \caption{
+        You can embed figures using the \texttt{\textbackslash includegraphics} command. EPS is the only format that can be embedded. Basically, figures should appear where they are cited in the text. You do not need to separate figures from the main text when you use \LaTeX\ for preparing your manuscript.
+    }\label{f1}
+\end{figure}
+
+\begin{acknowledgment}
+For environments for acknowledgement(s) are available: \verb|acknowledgment|, \verb|acknowledgments|, \verb|acknowledgement|, and \verb|acknowledgements|.
+\end{acknowledgment}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{jpsj} The abbreviation for JPSJ must be ``J. Phys. Soc. Jpn." \note{in the reference list}.
+\bibitem{instructions} More abbreviations of journal titles are listed in ``Instructions for Preparation of Manuscript".
+\bibitem{etal} The use of ``et al.'' is not accepted in principle, therefore, all the authors must be listed.
+\bibitem{ibid} The term ``ibid.'' should not be used even if the same journal or book is cited with different page numbers.
+\bibitem{Errata} Errata should be listed under the same reference number.
+\end{thebibliography}
+
+
+\end{document}
+
